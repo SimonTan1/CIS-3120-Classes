@@ -19,6 +19,10 @@ class Animal:
     def species(self):
         print(self.species1)
  
-            
+    def limbs(self, n):
+        self.limbs = n
+        print ("i have", self.limbs, "limbs")
+        legs = self.limbs/2
+        print (legs,"of them are legs")
     
     
