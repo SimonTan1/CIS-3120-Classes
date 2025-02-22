@@ -1,28 +1,37 @@
 class Animal:
-    species1 = "Homo Sapiens"
-    
+
     def __init__(self, name):
         self.__name = name
-        print("hello, i am", self.__name)
+        print("name of the animal is", self.__name)
 
-    def talk(self):
-        print("hi")
-        print("I can talk")
-     
+    def talk(self, speak=None):
+        self.speak = speak
+        if self.speak == "yes":
+            print("the animal is capable of speach")
+        else:
+            print("the animal is not capable of speach")
+
     def weight(self, w):
         self.weight = w
         if self.weight > 100:
-            print("i am heavier than 100 lbs")
+            print("animal is heavier than 100 lbs")
         else:
-            print("i am under 100 pounds")
-            
-    def species(self):
-        print(self.species1)
- 
-    def limbs(self, n):
-        self.limbs = n
-        print ("i have", self.limbs, "limbs")
-        legs = self.limbs/2
-        print (legs,"of them are legs")
-    
-    
+            print("animal is under 100 pounds")
+
+    def age(self, years):
+        self.age = years
+        print("i am", self.age, "years old")
+
+    def gender(self, gen):
+        animal_gender = {
+            "male": "xy",
+            "female": "xx"
+        }
+        print(f"the animal has {animal_gender[gen]} chromosomes")
+
+    def species(self, species):
+        self.species = species
+        print("the species is", self.species)
+
+
+
